@@ -1,4 +1,5 @@
 var path = require("path");
+var friendData = require("../data/friends.js")
 
 module.exports = function(app) {
 
@@ -8,49 +9,58 @@ app.get("/api/friends", function (req, res) {
     res.json(friendData);
 });
 
-// Create New Characters - takes in JSON input
+// Create new friends - takes in JSON input
 app.post("/api/friends", function(req, res) {
+
     var newFriend = req.body;
-  
+    var newScore = newFriend.totalScore;
+    var matchName = "";
+    var matchPhoto = "";
+    var friendScoresArr = [];
+
+    //Save all friendData totalScores to an array 
+    function scoresArr () {
+        for (var i = 0; i < friendData.length; i++) {
+            friendScoresArr.push(parseInt(friendData[i].totalScore))
+        }
+    }
+    scoresArr();
+
+    //Calculate the totalScores for FriendData and newFriend to find the closest match
+    function closest(array, num){
+        var i = 0;
+        var minDiff = 1000;
+        var ans;
+        for(i in array) {
+             var m = Math.abs(num-array[i]);
+             if( m < minDiff){ 
+                    minDiff = m; 
+                    ans = array[i]; 
+                }
+          }
+        return ans;
+    };
+
+    //Save that calcutated number to this matchedScore variable
+    var matchedScore = closest(friendScoresArr, newScore);
+
+    //Run through the friendData again to look for the friend that matches with the newly added friend
+    for (var i = 0; i < friendData.length; i++) {
+        if (parseInt(friendData[i].totalScore) === parseInt(matchedScore)) {
+            matchName = friendData[i].name;
+            matchPhoto = friendData[i].photo;
+        }
+
+    };
+    
     friendData.push(newFriend);
   
-    res.json(newFriend);
-
+    res.json({
+        matchName: matchName,
+        matchPhoto: matchPhoto
+    });
   });
   
 
 };
 
-//Start out with some friend data
-var friendData = [
-    {
-        name: "Jenna",
-        photo: "./app/public/images/Jenna.jpg",
-        scores: [1, 3, 2, 3, 5, 3, 5, 1, 4, 4],
-        totalScore: 31
-    },
-    {
-        name: "Kumesh",
-        photo: "./app/public/images/Kumesh.jpg",
-        scores: [4, 3, 1, 1, 4, 4, 5, 2, 4, 3],
-        totalScore: 31
-    },
-    {
-        name: "Cameron",
-        photo: "./app/public/images/Cameron.jpg",
-        scores: [4, 2, 4, 5, 1, 1, 3, 3, 5, 4],
-        totalScore: 32
-    },
-    {
-        name: "Zoe",
-        photo: "./app/public/images/Zoe.jpg",
-        scores: [3, 3, 1, 1, 2, 3, 1, 3, 2, 4],
-        totalScore: 23
-    },
-    {
-        name: "Nikki",
-        photo: "./app/public/images/Nikki.jpeg",
-        scores: [3, 1, 4, 4, 5, 1, 2, 1, 3, 2,],
-        totalScore: 26
-    }
-]

@@ -1,31 +1,41 @@
-var euros = [1, 5, 5];
-var sum2 = euros.reduce((total, amount) => total + amount); 
-
-console.log(sum2)
-
+//Start out with some friend data
 var friendData = [
     {
-        name: "Faye",
-        scores: [1, 3, 2, 3, 5, 3, 5, 1, 4, 4]
+        name: "Dog",
+        photo: "https://i.imgur.com/j8OrbWh.jpg",
+        scores: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        totalScore: 0
     },
     {
-        name: "Zane",
-        scores: [4, 3, 1, 1, 4, 4, 5, 2, 4, 3]
+        name: "Jenna",
+        photo: "./app/public/images/Jenna.jpg",
+        scores: [4, 6, 6, 8, 4, 6, 2, 2, 6, 4],
+        totalScore: 48
     },
     {
-        name: "Trey",
-        scores: [4, 2, 4, 5, 1, 1, 3, 3, 5, 4]
+        name: "Kumesh",
+        photo: "./app/public/images/Kumesh.jpg",
+        scores: [8, 6, 10, 8, 4, 6, 6, 2, 8, 10],
+        totalScore: 68
     },
     {
-        name: "Tessie",
-        scores: [3, 3, 1, 1, 2, 3, 1, 3, 2, 4]
+        name: "Cameron",
+        photo: "./app/public/images/Cameron.jpg",
+        scores: [6, 6, 6, 8, 2, 6, 6, 4, 8, 10],
+        totalScore: 62
     },
     {
-        name: "Willow",
-        scores: [3, 1, 4, 4, 5, 1, 2, 1, 3, 2,]
-    }
+        name: "Zoe",
+        photo: "./app/public/images/Zoe.jpg",
+        scores: [4, 4, 2, 8, 6, 4, 4, 8, 2, 2],
+        totalScore: 44
+    },
+    {
+        name: "Nikki",
+        photo: "./app/public/images/Nikki.jpeg",
+        scores: [8, 10, 10, 6, 8, 10, 8, 10, 10, 6],
+        totalScore: 86
+    },
 ]
 
-// var sum = friendData.reduce((total, amount) => total + amount); 
-// console.log(friendData[3].scores)
-// console.log(sum);
+module.exports = friendData;

@@ -6,23 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FriendFinder</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="icon" href="../images/tab.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"  href="../public/style.css">
+    <link rel="stylesheet" type="text/css" href="../public/style.css">
 </head>
 
 <style>
-
-    .modal-content {
-         /* background-color: rgb(202, 202, 207); */
+    .btn {
+        background-color: rgb(63, 109, 209);
+        border-color: rgb(63, 109, 209);
     }
-        
-     .modalIMG {
+
+    .modalIMG {
+        height: 200px;
+        width: 200px;
         border-radius: 50%;
+    }
+
+    .middle {
+        vertical-align: middle;
+    }
+
+    .input-group {
+        width: 200px;
+    }
+
+    .no-name p {
+        color: red;
     }
 </style>
 
@@ -39,7 +53,7 @@
         <input type="text" class="form-control surveyInput" id="name">
 
         <p class="surveyTwo">Link to Photo Image (Required)</p>
-        <input type="text" class="form-control surveyInput" id="name">
+        <input type="text" class="form-control surveyInput" id="photo">
         <hr>
 
         <!-- SURVEY QUESTIONS -->
@@ -48,11 +62,11 @@
         <div class="input-group mb-3">
             <select class="custom-select" id="q1">
                 <option selected value="0">Select an Option</option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
+                <option value="2">1 (Strongly Disagree)</option>
+                <option value="4">2</option>
+                <option value="6">3</option>
+                <option value="8">4</option>
+                <option value="10">5 (Strongly Agree)</option>
             </select>
         </div>
 
@@ -61,11 +75,11 @@
         <div class="input-group mb-3">
             <select class="custom-select" id="q2">
                 <option selected value="0">Select an Option</option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
+                <option value="2">1 (Strongly Disagree)</option>
+                <option value="4">2</option>
+                <option value="6">3</option>
+                <option value="8">4</option>
+                <option value="10">5 (Strongly Agree)</option>
             </select>
         </div>
 
@@ -74,11 +88,11 @@
         <div class="input-group mb-3">
             <select class="custom-select" id="q3">
                 <option selected value="0">Select an Option</option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
+                <option value="2">1 (Strongly Disagree)</option>
+                <option value="4">2</option>
+                <option value="6">3</option>
+                <option value="8">4</option>
+                <option value="10">5 (Strongly Agree)</option>
             </select>
         </div>
 
@@ -87,11 +101,11 @@
         <div class="input-group mb-3">
             <select class="custom-select" id="q4">
                 <option selected value="0">Select an Option</option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
+                <option value="2">1 (Strongly Disagree)</option>
+                <option value="4">2</option>
+                <option value="6">3</option>
+                <option value="8">4</option>
+                <option value="10">5 (Strongly Agree)</option>
             </select>
         </div>
 
@@ -100,11 +114,11 @@
         <div class="input-group mb-3">
             <select class="custom-select" id="q5">
                 <option selected value="0">Select an Option</option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
+                <option value="2">1 (Strongly Disagree)</option>
+                <option value="4">2</option>
+                <option value="6">3</option>
+                <option value="8">4</option>
+                <option value="10">5 (Strongly Agree)</option>
             </select>
         </div>
 
@@ -113,11 +127,11 @@
         <div class="input-group mb-3">
             <select class="custom-select" id="q6">
                 <option selected value="0">Select an Option</option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
+                <option value="2">1 (Strongly Disagree)</option>
+                <option value="4">2</option>
+                <option value="6">3</option>
+                <option value="8">4</option>
+                <option value="10">5 (Strongly Agree)</option>
             </select>
         </div>
 
@@ -126,11 +140,11 @@
         <div class="input-group mb-3">
             <select class="custom-select" id="q7">
                 <option selected value="0">Select an Option</option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
+                <option value="2">1 (Strongly Disagree)</option>
+                <option value="4">2</option>
+                <option value="6">3</option>
+                <option value="8">4</option>
+                <option value="10">5 (Strongly Agree)</option>
             </select>
         </div>
 
@@ -139,11 +153,11 @@
         <div class="input-group mb-3">
             <select class="custom-select" id="q8">
                 <option selected value="0">Select an Option</option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
+                <option value="2">1 (Strongly Disagree)</option>
+                <option value="4">2</option>
+                <option value="6">3</option>
+                <option value="8">4</option>
+                <option value="10">5 (Strongly Agree)</option>
             </select>
         </div>
 
@@ -153,11 +167,11 @@
         <div class="input-group mb-3">
             <select class="custom-select" id="q9">
                 <option selected value="0">Select an Option</option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
+                <option value="2">1 (Strongly Disagree)</option>
+                <option value="4">2</option>
+                <option value="6">3</option>
+                <option value="8">4</option>
+                <option value="10">5 (Strongly Agree)</option>
             </select>
         </div>
 
@@ -166,16 +180,19 @@
         <div class="input-group mb-3">
             <select class="custom-select" id="q10">
                 <option selected value="0">Select an Option</option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
+                <option value="2">1 (Strongly Disagree)</option>
+                <option value="4">2</option>
+                <option value="6">3</option>
+                <option value="8">4</option>
+                <option value="10">5 (Strongly Agree)</option>
             </select>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter"
-            id="submit"><i class="fas fa-check-circle"></i>
+        <div class="no-name no-photo text-center">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block no-modal" data-toggle="modal"
+            data-target="#exampleModalCenter" id="submit"><i class="fas fa-check-circle"></i>
             Submit</button>
 
         <hr>
@@ -189,8 +206,8 @@
     </div>
 
     <!-- MODAL -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
 
@@ -201,11 +218,10 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-6 text-center">
-                            <img class="modalIMG" src="https://static1.squarespace.com/static/5840939d20099e7a2a369f0d/5b42e26e575d1f7f89a8d981/5b42fbfa6d2a73e49d892650/1531116543689/Jenna-500px.jpg"
-                                height="230">
+                            <img id="match-img" class="modalIMG" src="" height="230">
                         </div>
                         <div class="col-6 text-center">
-                            <h1>Meet Jenna! Your new best friend!</h1>
+                            <h1 class="align-middle">Meet <span id="match-name"></span>! Your new best friend!</h1>
                         </div>
                     </div>
                 </div>
@@ -219,20 +235,23 @@
 </html>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
     crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script>
 
 
     $("#submit").on("click", function (event) {
-
         event.preventDefault();
-        
+
+        // Save all the user's answers into an array
         var surveyAnswers = [
             parseInt($("#q1").val()),
             parseInt($("#q2").val()),
@@ -246,26 +265,42 @@
             parseInt($("#q10").val())
         ];
 
+        //Add the users answers together to generate a total score
         var sum = surveyAnswers.reduce((total, amount) => total + amount);
 
+        //If the user forgets to type in their name, don't submit the form and let the user know
+        //Else continue to post their information to the database
         if ($("#name").val() === "") {
-            alert("You forgot to tell us your name!")
+            $("#submit").removeAttr("data-toggle");
+            alert("You forgot to tell us your name!");
         }
+        if ($("#photo").val() === "") {
+            $("#submit").removeAttr("data-toggle");
+            alert("You forgot to add a photo link! ex.(https://imgur.com/my-photo");
+        }
+
         else {
+            $("#submit").attr("data-toggle", "modal");
 
-            var newFriend = {
-                name: $("#name").val().trim(),
-                scores: surveyAnswers,
-                totalScore: sum
-            }
-
-            $.post("/api/friends", newFriend)
-                .then(function (data) {
-                    console.log(data)
-                });
+        var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: surveyAnswers,
+            totalScore: sum
         }
+        console.log(newFriend)
 
+        // Send post then do magic and return with match info
+        //Add match info to modal
+        $.post("/api/friends", newFriend)
+            .then(function (res) {
+                console.log(res)
+                $("#match-name").text(res.matchName);
+                $("#match-img").attr("src", res.matchPhoto);
+            });
+        }
     });
+
 
 
 </script>
