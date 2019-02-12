@@ -41,9 +41,28 @@ hr {
 }
 
 .surveyInput {
-    width: 300px;
+    width: 600px;
 }
 
 .input-group {
     width: 160px;   
+}
+
+.btn {
+    background-color: rgb(63, 109, 209);
+    border-color: rgb(63, 109, 209);
+}
+
+.modalIMG {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.middle {
+    vertical-align: middle;
+}
+
+.input-group {
+    width: 200px;
 }

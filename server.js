@@ -9,15 +9,13 @@ app.use(express.json());
 
 //ROUTES
 //------------------------------
-// require("./app/routing/htmlRoutes")(app);
-// require("./app/routing/apiRoutes")(app)
 app.use('/app',express.static('app'));
 
 
 require(path.join(__dirname, "app/routing/apiRoutes"))(app);
 require(path.join(__dirname, "app/routing/htmlRoutes"))(app);
 
-// app.use(express.static(__dirname + '/public'));
+app.use(express.static('./app/public'));
 
 
 
