@@ -27,7 +27,7 @@
         <p class="surveyTwo">Name (Required)</p>
         <input type="text" class="form-control surveyInput" id="name">
 
-        <p class="surveyTwo">Link to Photo Image (Required)</p>
+        <p class="surveyTwo">Link to Photo Image (e.g., https://i.imgur.com/j8OrbWh.jpg)</p>
         <input type="text" class="form-control surveyInput" id="photo">
         <hr>
 
@@ -240,6 +240,8 @@
             parseInt($("#q10").val())
         ];
 
+        var photoGrab = $("#photo").val().trim();
+
         //Add the users answers together to generate a total score
         var sum = surveyAnswers.reduce((total, amount) => total + amount);
 
@@ -249,17 +251,18 @@
             $("#submit").removeAttr("data-toggle");
             alert("You forgot to tell us your name!");
         }
-        if ($("#photo").val() === "") {
-            $("#submit").removeAttr("data-toggle");
-            alert("You forgot to add a photo link! ex.(https://imgur.com/my-photo");
-        }
 
-        else {
-            $("#submit").attr("data-toggle", "modal");
+        //If no image is given, We will provide a placeholder image
+        if ($("#photo").val().trim() === "") {
+            photoGrab = "./images/blank.jpg"
+        }
+        
+
+        $("#submit").attr("data-toggle", "modal");
 
         var newFriend = {
             name: $("#name").val().trim(),
-            photo: $("#photo").val().trim(),
+            photo: photoGrab,
             scores: surveyAnswers,
             totalScore: sum
         }
@@ -273,7 +276,7 @@
                 $("#match-name").text(res.matchName);
                 $("#match-img").attr("src", res.matchPhoto);
             });
-        }
+        
     });
 
 
